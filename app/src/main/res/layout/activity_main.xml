@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.musiccloudplayer.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/imageButtonMenu"
+            style="@style/ButtonsTopAndDown"
+            android:layout_weight="1"
+            android:background="@color/buttonsColor"
+            app:srcCompat="@drawable/manemenu" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            style="@style/ButtonsTopAndDown"
+            android:layout_weight="1"
+            android:background="@color/buttonsColor"
+            app:srcCompat="@drawable/ic_ring_volume_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            style="@style/ButtonsTopAndDown"
+            android:layout_weight="1"
+            android:background="@color/buttonsColor"
+            app:srcCompat="@drawable/ic_share_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonClouds"
+            style="@style/ButtonsTopAndDown"
+            app:srcCompat="@drawable/ic_cloud_queue_white_24dp"
+            android:layout_weight="1"
+            android:background="@color/buttonsColor"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="@drawable/w6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.94"
+                android:padding="16dp"
+                app:srcCompat="@drawable/disclable" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Lenin's package 2006"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="2"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.00"
+                    android:textColor="@android:color/background_light" />
+
+                <SeekBar
+                    android:id="@+id/seekBar5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="7.26"
+                    android:textColor="@android:color/background_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Utopian socialism"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="City of Sun"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            style="@style/ButtonsTopAndDown"
+            app:srcCompat="@drawable/ic_play_circle_outline_white_24dp"
+            android:layout_weight="1"
+            android:background="@color/buttonsColor"/>
+
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            style="@style/ButtonsTopAndDown"
+            app:srcCompat="@drawable/ic_playlist_play_white_24dp"
+            android:layout_weight="1"
+            android:background="@color/buttonsColor"/>
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            style="@style/ButtonsTopAndDown"
+            android:layout_weight="1"
+            android:background="@color/buttonsColor"
+            app:srcCompat="@drawable/equalizer3" />
+
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            style="@style/ButtonsTopAndDown"
+            android:layout_weight="1"
+            android:background="@color/buttonsColor"
+            app:srcCompat="@drawable/ic_sync_white_24dp" />
+
+    </LinearLayout>
+</LinearLayout>
