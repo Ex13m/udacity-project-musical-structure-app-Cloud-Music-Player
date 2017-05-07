@@ -242,7 +242,7 @@
 
 
         <ImageButton
-            android:id="@+id/imageButtonRescanCclouFolders"
+            android:id="@+id/imageButtonRescanCloudFolders"
             style="@style/ButtonsTopAndDown"
             android:layout_weight="1"
             android:background="@color/buttonsColor"
