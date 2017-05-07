@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CloudSelector"
+                  android:label="Select Clouds and Folders"/>
+
+        <activity android:name=".PlayList"
+            android:label="Play List"/>
+
+        <activity android:name=".Equalizer"
+            android:label="Equalizer"></activity>
     </application>
 
 </manifest>
