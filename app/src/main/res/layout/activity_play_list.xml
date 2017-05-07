@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.musiccloudplayer.PlayList">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/darker_gray"
+        android:background="@color/buttonsColor"
         android:orientation="horizontal">
 
 
@@ -38,11 +39,9 @@
         <ImageButton
             android:id="@+id/imageButtonClouds"
             style="@style/ButtonsTopAndDown"
-            app:srcCompat="@drawable/ic_cloud_queue_white_24dp"
             android:layout_weight="1"
-            android:background="@color/buttonsColor"/>
-
-
+            android:background="@color/buttonsColor"
+            app:srcCompat="@drawable/ic_cloud_queue_white_24dp" />
 
 
     </LinearLayout>
@@ -53,6 +52,15 @@
         android:layout_weight="7"
         android:background="@drawable/w6"
         android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -639,6 +647,11 @@
 
         </LinearLayout>
 
+
+        </LinearLayout>
+
+        </ScrollView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -672,7 +685,7 @@
 
 
         <ImageButton
-            android:id="@+id/imageButtonRescanCloudFolders"
+            android:id="@+id/imageButtonRescan"
             style="@style/ButtonsTopAndDown"
             android:layout_weight="1"
             android:background="@color/buttonsColor"
