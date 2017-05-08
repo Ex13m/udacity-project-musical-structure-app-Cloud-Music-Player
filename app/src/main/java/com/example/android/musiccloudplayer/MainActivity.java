@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUpBtnAndTxt();
-        animationOfButtonsWhenActivityStart(Techniques.ZoomIn);
+        animationOfButtonsWhenActivityStart(Techniques.Shake);
     }
 
     //onClick selector for buttons actions
@@ -36,39 +36,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.imageButtonMenu:
                 toastMaker(getString(R.string.popup_menu));
+                animationOfButtonsWhenActivityStart(Techniques.Shake);
 
                 break;
             case R.id.imageButtonOnRingtone:
                 toastMaker(getString(R.string.ring_tone_selected));
+                animationOfButtonsWhenActivityStart(Techniques.Shake);
                 break;
             case R.id.imageButtonShare:
                 toastMaker(getString(R.string.shared_song));
+                animationOfButtonsWhenActivityStart(Techniques.Shake);
                 break;
             case R.id.imageButtonClouds:
                 Intent intent = new Intent(MainActivity.this, CloudSelector.class);
-                animationOfButtonsWhenActivityClosed(Techniques.SlideOutUp,Techniques.SlideOutDown);
+
+
                 startActivity(intent);
                 break;
             case R.id.imageButtonPlayer:
                 Intent intent1 = new Intent(MainActivity.this, MainActivity.class);
-                animationOfButtonsWhenActivityClosed(Techniques.SlideOutUp,Techniques.SlideOutDown);
+
                 startActivity(intent1);
                 break;
             case R.id.imageButtonPlayList:
                 Intent intent2 = new Intent(MainActivity.this, PlayList.class);
-                animationOfButtonsWhenActivityClosed(Techniques.SlideOutUp,Techniques.SlideOutDown);
+
                 startActivity(intent2);
                 break;
             case R.id.imageButtonEqualizer:
-                animationOfButtonsWhenActivityClosed(Techniques.SlideOutUp,Techniques.SlideOutDown);
+
                 Intent intent3 = new Intent(MainActivity.this, Equalizer.class);
                 startActivity(intent3);
                 break;
             case R.id.imageButtonRescan:
                 toastMaker(getString(R.string.rescan_folders));
+                animationOfButtonsWhenActivityStart(Techniques.Shake);
                 break;
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     // setup buttons

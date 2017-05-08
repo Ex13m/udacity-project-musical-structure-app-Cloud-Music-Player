@@ -19,7 +19,7 @@ public class CloudSelector extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cloud_selector);
         setUpBtnAndTxt();
-        animationOfButtonsWhenActivityStart(Techniques.ZoomIn);
+        animationOfButtonsWhenActivityStart(Techniques.Shake);
     }
 
     //onClick selector for buttons actions
@@ -29,39 +29,48 @@ public class CloudSelector extends AppCompatActivity implements View.OnClickList
 
             case R.id.imageButtonMenu:
                 toastMaker(getString(R.string.popup_menu));
-
+                animationOfButtonsWhenActivityStart(Techniques.Shake);
                 break;
             case R.id.imageButtonOnRingtone:
                 toastMaker(getString(R.string.ring_tone_selected));
+                animationOfButtonsWhenActivityStart(Techniques.Shake);
                 break;
             case R.id.imageButtonShare:
                 toastMaker(getString(R.string.shared_song));
+                animationOfButtonsWhenActivityStart(Techniques.Shake);
                 break;
             case R.id.imageButtonClouds:
                 Intent intent = new Intent(CloudSelector.this, CloudSelector.class);
-                animationOfButtonsWhenActivityClosed(Techniques.SlideOutUp,Techniques.SlideOutDown);
+
                 startActivity(intent);
                 break;
             case R.id.imageButtonPlayer:
                 Intent intent1 = new Intent(CloudSelector.this, MainActivity.class);
-                animationOfButtonsWhenActivityClosed(Techniques.SlideOutUp,Techniques.SlideOutDown);
+
                 startActivity(intent1);
                 break;
             case R.id.imageButtonPlayList:
                 Intent intent2 = new Intent(CloudSelector.this, PlayList.class);
-                animationOfButtonsWhenActivityClosed(Techniques.SlideOutUp,Techniques.SlideOutDown);
+
                 startActivity(intent2);
                 break;
             case R.id.imageButtonEqualizer:
-                animationOfButtonsWhenActivityClosed(Techniques.SlideOutUp,Techniques.SlideOutDown);
+
                 Intent intent3 = new Intent(CloudSelector.this, Equalizer.class);
                 startActivity(intent3);
                 break;
             case R.id.imageButtonRescan:
                 toastMaker(getString(R.string.rescan_folders));
+                animationOfButtonsWhenActivityStart(Techniques.Shake);
                 break;
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(CloudSelector.this, MainActivity.class);
+        startActivity(intent);
     }
 
     // setup buttons
@@ -92,7 +101,6 @@ public class CloudSelector extends AppCompatActivity implements View.OnClickList
     }
 
 
-
     //                          animations
     //View animation library - https://github.com/daimajia/AndroidViewAnimations
     public void btnAnimations(View view, Techniques techniques, int duration) {
@@ -105,25 +113,28 @@ public class CloudSelector extends AppCompatActivity implements View.OnClickList
         //                .playOn(view);
         //
     }
-    protected void animationOfButtonsWhenActivityStart(Techniques techniques){
-        btnAnimations(imageButtonMenu,techniques,400);
-        btnAnimations(imageButtonOnRingtone,techniques,500);
-        btnAnimations(imageButtonShare,techniques,600);
-        btnAnimations(imageButtonClouds,techniques,700);
-        btnAnimations(imageButtonPlayer,techniques,800);
-        btnAnimations(imageButtonPlayList,techniques,900);
-        btnAnimations(imageButtonEqualizer,techniques,1000);
-        btnAnimations(imageButtonRescan,techniques,1100);
+
+
+    protected void animationOfButtonsWhenActivityStart(Techniques techniques) {
+        btnAnimations(imageButtonMenu, techniques, 400);
+        btnAnimations(imageButtonOnRingtone, techniques, 500);
+        btnAnimations(imageButtonShare, techniques, 600);
+        btnAnimations(imageButtonClouds, techniques, 700);
+        btnAnimations(imageButtonPlayer, techniques, 800);
+        btnAnimations(imageButtonPlayList, techniques, 900);
+        btnAnimations(imageButtonEqualizer, techniques, 1000);
+        btnAnimations(imageButtonRescan, techniques, 1100);
     }
-    protected void animationOfButtonsWhenActivityClosed(Techniques techniques,Techniques techniques1){
-        btnAnimations(imageButtonMenu,techniques,400);
-        btnAnimations(imageButtonOnRingtone,techniques,500);
-        btnAnimations(imageButtonShare,techniques,600);
-        btnAnimations(imageButtonClouds,techniques,700);
-        btnAnimations(imageButtonPlayer,techniques1,800);
-        btnAnimations(imageButtonPlayList,techniques1,900);
-        btnAnimations(imageButtonEqualizer,techniques1,1000);
-        btnAnimations(imageButtonRescan,techniques1,1100);
+
+    protected void animationOfButtonsWhenActivityClosed(Techniques techniques, Techniques techniques1) {
+        btnAnimations(imageButtonMenu, techniques, 400);
+        btnAnimations(imageButtonOnRingtone, techniques, 500);
+        btnAnimations(imageButtonShare, techniques, 600);
+        btnAnimations(imageButtonClouds, techniques, 700);
+        btnAnimations(imageButtonPlayer, techniques1, 800);
+        btnAnimations(imageButtonPlayList, techniques1, 900);
+        btnAnimations(imageButtonEqualizer, techniques1, 1000);
+        btnAnimations(imageButtonRescan, techniques1, 1100);
     }
 //**************************************************************************************************
 
